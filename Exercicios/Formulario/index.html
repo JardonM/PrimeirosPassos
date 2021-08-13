@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="main.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+    <title>Formulario</title>
+</head>
+
+<body>
+    <div>
+        <h1 id="titulo">Cadastro</h1>
+        <p id="subtitulo">Complete suas informações</p>
+        <br>
+    </div>
+    <form action="">
+        <fieldset class="grupo">
+            <div class="campo">
+                <label for="nome"><strong>Nome</strong></label>
+                <input type="text" name="nome" id="nome" required>
+            </div>
+
+            <div class="campo">
+                <label for="sobrenome"><strong>Sobrenome</strong></label>
+                <input type="text" name="sobrenome" id="sobrenome" required>
+            </div>
+            <div class="campo">
+                <label for="telefone"><strong>Telefone</strong></label>
+                <input type="tel" name="telefone" id="telefone">
+            </div>
+            <div class="campo">
+                <label for="nasc"><strong>Data de Nascimento</strong></label>
+                <input type="date" name="nasc" id="nasc">
+            </div>
+        </fieldset>
+
+        <div class="campo">
+            <label for="email"><strong>Email</strong></label>
+            <input type="email" name="email" id="email" required>
+        </div>
+
+        <div class="campo">
+            <label><strong>Genero</strong></label>
+            <form id="genero">
+                <label>
+                <input type="radio" name="genero" value="feminino">Feminino
+            </label>
+                <label>
+                <input type="radio" name="genero" value="masculino">Masculino
+            </label>
+                <label>
+                <input type="radio" name="genero" value="naobinario">Nao-Binario
+            </label>
+            </form>
+        </div>
+
+        <div class="campo">
+            <label for="estado"><strong>Estado</strong></label>
+            <select id="estado">
+                <option selected disabled value="">Selecione</option>
+                <option>AC</option>
+                <option>AL</option>
+                <option>AM</option>
+                <option>AP</option>
+                <option>BA</option>
+                <option>CE</option>
+                <option>DF</option>
+                <option>ES</option>
+                <option>GO</option>
+                <option>MA</option>
+                <option>MG</option>
+                <option>MS</option>
+                <option>MT</option>
+                <option>PA</option>
+                <option>PB</option>
+                <option>PE</option>
+                <option>PI</option>
+                <option>PR</option>
+                <option>RJ</option>
+                <option>RO</option>
+                <option>RN</option>
+                <option>RR</option>
+                <option>RS</option>
+                <option>SC</option>
+                <option>SP</option>
+                <option>SE</option>
+                <option>TO</option>
+            </select>
+        </div>
+        <div class="campo">
+            <br>
+            <label><strong>Deixe sua opinião</strong></label>
+            <textarea rows="6" style="width: 26em;" id="opiniao" name="opiniao"></textarea>
+        </div>
+
+        <button class="botao" onclick="cadastraPessoa()" type="submit">Concluído</button>
+    </form>
+
+    <div class="pesquisa">
+        <label>Pesquisa</label>
+        <input type="text" id="encontraNome">
+        <button onclick="encontrarNome()" type="submit">Enviar</button>
+    </div>
+
+
+</body>
+
+</html>
